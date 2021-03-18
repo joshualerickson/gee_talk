@@ -47,9 +47,33 @@ xaringanExtra::use_xaringan_extra(c("tile_view", "tachyons", "scribble", 'share_
 - Focus is leveraging computing platforms (R, Python, GEE) for resource management work.
 
 .me-box[]
-
 ---
 
+
+## Goals
+--
+
+- Leave having an idea of what GEE is and what it can do  
+
+<br>
+<img src="gee_talk_files/images/gee.png" height="50px" right: 25%/>
+<br>
+<br>
+- Most importantly, some applications in hydrology  
+
+.water-box[]
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+- What, how, apply. 
+
+---
 
 ## What is GEE?
 --
@@ -79,9 +103,7 @@ xaringanExtra::use_xaringan_extra(c("tile_view", "tachyons", "scribble", 'share_
 
 - Fast, really really fast!
 
-- Lots of documentation
-
-- Research buzz...
+- Lots of documentation, apps, tutorials, research, etc.
 
 --
 
@@ -108,31 +130,6 @@ xaringanExtra::use_xaringan_extra(c("tile_view", "tachyons", "scribble", 'share_
 ---
 
 
-## Goals
---
-
-- Leave having an idea of what GEE is and what it can do  
-
-<br>
-<img src="gee_talk_files/images/gee.png" height="50px" />
-<br>
-<br>
-- Most importantly, some applications in hydrology  
-
-.water-box[]
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-- Start with how and then applications  
-
----
-
 ## Reduce Image (The how?)
 
 --
@@ -141,6 +138,12 @@ A big advantage of earth engine is to reduce large image collections fast.
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 For example, let's say we want the median PRISM monthly precipitation from 2010-present]
+<br>
+<br>
+<center>
+<img src="gee_talk_files/images/precip_intro.png" height="200px" align="bottom" />
+</center>
+
 ---
 
 
@@ -206,7 +209,7 @@ Very similar to `extract` in ArcGIS
 
 ## You can provide any geometry
 
-- For example, timber sale units.
+- For example, proposed land use activities.
 
 ```{r, echo=FALSE,fig.align='center'}
 library(sf)
@@ -259,7 +262,7 @@ This is a way to keep a certain temporal feature, e.g. year, month, week, etc.
 
 .pull-left[
 
-<img src="gee_talk_files/images/band_ex.png" height="225px" />
+<img src="gee_talk_files/images/reducer.png" height="425px" />
 
 ]
 
@@ -282,7 +285,10 @@ This is a way to keep a certain temporal feature, e.g. year, month, week, etc.
 
 .pull-right[
 
-<img src="gee_talk_files/images/precip_time.png" height="450px" />
+
+```{r, echo = FALSE}
+knitr::include_graphics("gee_talk_files/images/precip_time.png")
+```
 
 ]
 
@@ -318,6 +324,14 @@ This is a way to keep a certain temporal feature, e.g. year, month, week, etc.
 
 ---
 
+# Animation with time series
+
+<center>
+<img src="gee_talk_files/images/jbratt.gif" height="500px" />
+</center>
+
+---
+
 # Into the future?
 <center>
 <img src="https://media.giphy.com/media/ZZkCo8zKWtt2ZgozfX/giphy.gif" height="500px" />
@@ -326,7 +340,80 @@ This is a way to keep a certain temporal feature, e.g. year, month, week, etc.
 ---
 # Into the future?
 
-There are available climate models in GEE.
+There are available climate models in GEE. NASA Earth Exchange.
+
+<center>
+<img src="gee_talk_files/images/climate.png" height="500px" />
+</center>
+
+---
+# Into the future?
+
+What about the units we looked at?
+
+--
+
+.pull-left[
+<img src="gee_talk_files/images/units.png" height="300px" />
+]
 
 
+--
+
+.pull-right[
+<img src="gee_talk_files/images/future_temp_box.png" height="400px" />
+]
+
+---
+# Wrapping Up
+
+--
+
+- GEE is a way to .blue[reduce] big image collections
+
+.pull-right[
+
+<center>
+
+<img src="gee_talk_files/images/prism.png" height="75px" />
+
+</center>
+]
+
+--
+
+- You can do it from local to regional .blue[scale]
+
+.pull-right[
+
+<center>
+
+<img src="gee_talk_files/images/units.png" height="75px" />
+
+</center>
+]
+
+--
+
+- Climate projections into the .blue[future]
+
+.pull-right[
+
+<center>
+
+<img src="gee_talk_files/images/climate.png" height="75px" />
+
+</center>
+]
+
+---
+
+# Wrapping Up
+
+- slides available at https://hydroblog.org/slides/gee_talk/gee_talk.html
+
+- some apps from Justin Braaten; https://emaprlab.users.earthengine.app/view/lt-gee-time-series-animator, https://t.co/xqUN7W8KBa?amp=1, https://t.co/3fTl0wI8Gh?amp=1
+<center>
+.end-box[]
+</center>
 
